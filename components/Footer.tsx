@@ -157,7 +157,7 @@ export default function Footer() {
           </div>
 
           <div className="text-xs text-white/60 md:text-right">
-            بسم الله الرحمن الرحيم
+            {/* بسم الله الرحمن الرحيم */}
           </div>
         </div>
       </div>
