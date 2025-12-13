@@ -1,4 +1,23 @@
 @import "tailwindcss";
+.container-page {
+  @apply mx-auto max-w-6xl px-4;
+}
+@keyframes heroUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-hero-up {
+  animation: heroUp 500ms ease-out both;
+}
 
 :root {
   --background: #ffffff;
@@ -23,4 +42,163 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes heroUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-hero-up {
+  animation: heroUp 500ms ease-out both;
+}
+
+/* progress bar fill */
+@keyframes progressFill {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.animate-progress {
+  transform: translateX(-100%);
+  animation-name: progressFill;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes testimonialIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-testimonial-in {
+  animation: testimonialIn 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes testimonialIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-testimonial-in {
+  animation: testimonialIn 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes testimonialIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-testimonial-in {
+  animation: testimonialIn 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes floatParticle {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-18px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+/* shimmer untuk glass card */
+.shimmer-mask::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.14) 45%,
+    rgba(255, 255, 255, 0.06) 55%,
+    transparent 65%
+  );
+  transform: translateX(-60%);
+  animation: shimmerMove 6.5s ease-in-out infinite;
+}
+
+@keyframes shimmerMove {
+  0% {
+    transform: translateX(-60%) rotate(8deg);
+  }
+  55% {
+    transform: translateX(60%) rotate(8deg);
+  }
+  100% {
+    transform: translateX(60%) rotate(8deg);
+  }
+}
+/* animasi santri: floating + sedikit rotate (thinking vibe) */
+@keyframes thinkFloat {
+  0% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+}
+.animate-think {
+  animation: thinkFloat 3.2s ease-in-out infinite;
+}
+
+/* shimmer halus di card kanan */
+.faq-shimmer::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.18) 46%,
+    rgba(255, 255, 255, 0.06) 55%,
+    transparent 66%
+  );
+  transform: translateX(-60%);
+  animation: faqShimmerMove 7s ease-in-out infinite;
+}
+@keyframes faqShimmerMove {
+  0% {
+    transform: translateX(-60%) rotate(10deg);
+  }
+  55% {
+    transform: translateX(60%) rotate(10deg);
+  }
+  100% {
+    transform: translateX(60%) rotate(10deg);
+  }
 }
