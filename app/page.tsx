@@ -4,6 +4,7 @@ import Testimoni from "@/components/Testimoni";
 import JoinStats from "@/components/JoinStats";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import AuthCard from "@/components/AuthStack";
 
 export default function Home() {
   return (

@@ -202,3 +202,29 @@ html {
     transform: translateX(60%) rotate(10deg);
   }
 }
+/* ===== PRINT A4 ===== */
+@media print {
+  body {
+    background: white !important;
+  }
+
+  #no-print {
+    display: none !important;
+  }
+
+  .print-a4 {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 14mm;
+    margin: 0 auto;
+    background: white;
+    color: black;
+  }
+
+  .section-title {
+    font-size: 12px;
+    font-weight: 800;
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+  }
+}
